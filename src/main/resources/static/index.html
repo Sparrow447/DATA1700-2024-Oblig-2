@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+
+</head>
+<body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box; /* Added to keep input full-width */
+    }
+    button {
+        background-color: #5cb85c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+    button:hover {
+        background-color: #4cae4c;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        background: #eee;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 4px;
+    }
+</style>
+
+<h1>Kjøp Kinobilletter</h1>
+<label for="film">Film</label>
+<select id="film">
+    <option value="">Velg film</option>
+    <option value="Film 1">Parasite</option>
+    <option value="Film 2">Kung fu panda 4</option>
+    <option value="Film 2">Insepction</option>
+    <option value="Film 2">Interseteller</option>
+</select>
+<label for="antall">Antall</label>
+<input type="number" id="antall" min="1">
+<label for="fornavn">Fornavn</label>
+<input type="text" id="fornavn">
+<label for="etternavn">Etternavn</label>
+<input type="text" id="etternavn">
+<label for="telefon">Telefon</label>
+<input type="text" id="telefon">
+<label for="epost">E-post</label>
+<input type="email" id="epost">
+<button id="kjopBillett">Kjøp billett</button>
+<button id="slettAlle">Slett alle billettene</button>
+
+<h2>Alle billetter</h2>
+<ul id="billettListe"></ul>
+
+<script src="billett.js"></script>
+</body>
+</html>
