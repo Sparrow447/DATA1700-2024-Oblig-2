@@ -2,28 +2,30 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/billetter")
 public class BillettController {
-    private final List<Billett> billetter = new ArrayList<>();
+
+    private final BillettRepository billettRepository;
+
+    public BillettController(BillettRepository billettRepository) {
+        this.billettRepository = billettRepository;
+    }
 
     @PostMapping
     public Billett leggTilBillett(@RequestBody Billett billett) {
-        billetter.add(billett);
-        return billett;
+        return billettRepository.save(billett);
     }
 
     @GetMapping
     public List<Billett> hentAlleBilletter() {
-        return billetter;
+        return billettRepository.findAll();
     }
 
     @DeleteMapping
     public void slettAlleBilletter() {
-        billetter.clear();
+        billettRepository.deleteAll();
     }
 }
-
