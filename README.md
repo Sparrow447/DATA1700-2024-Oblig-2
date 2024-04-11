@@ -8,8 +8,6 @@ Opprinnelig var applikasjonen designet for å kjøre helt på klient-siden, hvor
 
 # Oppdatering av Kinobillett-applikasjon med H2 Database
 
-I denne oppdateringen av Kinobillett-applikasjonen, utførte vi flere trinn for å integrere en H2 in-memory database for å persistere data mellom applikasjonssesjoner.
-
 ## Trinnene inkluderte:
 
 1. **Legge til Avhengigheter:**
